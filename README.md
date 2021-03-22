@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
 [![Aws Link](https://aws.link)](https://packagist.org/packages/laravel/lumen-framework)
 [![Figma](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Marvel](https://marvel)](https://packagist.org/packages/laravel/lumen-framework)
+[![Figma](https://figma)](https://packagist.org/packages/laravel/lumen-framework)
 
 App that takes you to the moon when it comes to managing your finances.
 
