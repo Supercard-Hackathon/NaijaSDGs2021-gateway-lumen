@@ -6,7 +6,16 @@
     "type": "project",
     "require": {
         "php": "^7.2.5",
-        "laravel/lumen-framework": "^7.0"
+        "laravel/lumen-framework": "^7.0",
+        "dusterio/lumen-passport": "^0.2.20",
+        "flipbox/lumen-generator": "^8.0",
+        "guzzlehttp/guzzle": "^7.1",
+        "illuminate/mail": "^7.30",
+        "jrm2k6/cloudder": "^0.7.0",
+        "league/flysystem": " ~1.0",
+        "pusher/pusher-php-server": "^4.1",
+        "spatie/laravel-permission": "^3.13",
+        "tucker-eric/eloquentfilter": "^2.4"
     },
     "require-dev": {
         "fzaninotto/faker": "^1.9.1",

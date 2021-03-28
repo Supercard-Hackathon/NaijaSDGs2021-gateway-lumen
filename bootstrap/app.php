@@ -60,6 +60,17 @@ $app->singleton(
 */
 
 $app->configure('app');
+$app->configure('auth');
+$app->configure('services');
+$app->configure('broadcasting');
+$app->configure('permission');
+$app->configure('database');
+$app->configure('enums');
+$app->configure('mail');
+$app->configure('queue');
+$app->configure('filesystems');
+$app->make('queue');
+config(['eloquentfilter.namespace' => "App\\Models\\ModelFilters\\"]);
 
 /*
 |--------------------------------------------------------------------------
@@ -76,9 +87,12 @@ $app->configure('app');
 //     App\Http\Middleware\ExampleMiddleware::class
 // ]);
 
-// $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
-// ]);
+$app->routeMiddleware([
+    'auth' => App\Http\Middleware\Authenticate::class,
+    'client' => \Laravel\Passport\Http\Middleware\CheckClientCredentials::class,
+    'permission' => Spatie\Permission\Middlewares\PermissionMiddleware::class,
+    'role'       => Spatie\Permission\Middlewares\RoleMiddleware::class,
+]);
 
 /*
 |--------------------------------------------------------------------------
@@ -93,8 +107,18 @@ $app->configure('app');
 
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
-// $app->register(App\Providers\EventServiceProvider::class);
+$app->register(App\Providers\EventServiceProvider::class);
 $app->register(App\Providers\MainServiceProvider::class);
+$app->register(App\Providers\UserServiceProvider::class);
+$app->register(Laravel\Passport\PassportServiceProvider::class);
+$app->register(Dusterio\LumenPassport\PassportServiceProvider::class);
+$app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+$app->register(JD\Cloudder\CloudderServiceProvider::class);
+$app->alias('cache', \Illuminate\Cache\CacheManager::class); 
+$app->register(Spatie\Permission\PermissionServiceProvider::class);
+$app->register(EloquentFilter\LumenServiceProvider::class);
+$app->register(Illuminate\Mail\MailServiceProvider::class);
+$app->register(Illuminate\Filesystem\FilesystemServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
