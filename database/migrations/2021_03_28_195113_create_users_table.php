@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
             $table->string("country")->nullable();
             $table->string("phone")->nullable();
             $table->integer("organization_id")->nullable();
-            $table->integer("department_id")->nullable();
+            $table->integer("group_id")->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamp('last_logged_in')->nullable();
             $table->timestamps();

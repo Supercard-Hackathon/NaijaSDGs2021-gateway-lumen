@@ -101,4 +101,12 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     {
         return $this->morphOne(File::class, 'fileable');
     }
+
+    /**
+     * Get the organization a user belongs to.
+     */
+    public function organization()
+    {
+        return $this->belongsTo('App\Models\Organization');
+    }
 }
