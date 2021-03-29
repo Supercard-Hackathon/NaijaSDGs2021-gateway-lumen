@@ -1,6 +1,6 @@
 # Supercard Baby!
 
-[![Figma High Fidelity Designs](https://logowik.com/content/uploads/images/figma.jpg)](https://www.figma.com/file/QZE5RDpohlz1on9zc1Fsgm/Supercard?node-id=0%3A1)
+[![Figma High Fidelity Designs](https://www.dropbox.com/sh/ha20rn6s4vdaihm/AAC7mG8TRjSQrrf6fPIiDoOwa/Supercard%20branding?dl=0&preview=default.png&subfolder_nav_tracking=1)](https://www.figma.com/file/QZE5RDpohlz1on9zc1Fsgm/Supercard?node-id=0%3A1)
 
 Supercard solution is targeted at companies with poor expense tracking structure. It makes expense
 tracking easier and the rigorous method of reimbursing employees simple. Large firms that deal with petty
