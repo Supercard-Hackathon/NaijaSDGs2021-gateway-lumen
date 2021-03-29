@@ -20,4 +20,12 @@ class Group extends Model
     {
         return $this->belongsTo('App\Models\Organization');
     }
+
+    /**
+     * Get all the users of a group.
+     */
+    public function users()
+    {
+        return $this->belongsToMany('App\Models\User');
+    }
 }

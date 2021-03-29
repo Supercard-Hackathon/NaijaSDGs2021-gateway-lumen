@@ -103,6 +103,14 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     }
 
     /**
+     * Get all the groups of a user.
+     */
+    public function groups()
+    {
+        return $this->belongsToMany('App\Models\Group');
+    }
+
+    /**
      * Get the organization a user belongs to.
      */
     public function organization()

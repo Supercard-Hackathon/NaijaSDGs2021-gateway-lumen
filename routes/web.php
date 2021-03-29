@@ -13,5 +13,6 @@ $router->group(['middleware' => 'client'], function() use ($router){
 	// routes that start with url "gateway/"
 	$router->group(['prefix' => 'gateway'], function () use ($router) {
 		$router->post('organization/new', 'organization\OrganizationController@newOrganization');
+		$router->post('group/new', 'group\GroupController@newGroup');
 	});
 });

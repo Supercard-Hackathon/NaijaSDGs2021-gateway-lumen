@@ -18,7 +18,16 @@ class GroupRepository implements GroupInterface
      */
     public function newGroup(Request $request)
     {
-        return 'got to new Group page';  
+        // persist new Group details
+        $new_group = Group::firstOrCreate([
+                        "name" => $request->name,
+                        "organization_id" => $request->organization_id,
+                    ]);
+
+        // call event that a new Group has been created
+        // event(new NewGroupCreatedEvent($new_group));
+
+        return $new_group; 
     }
 
     /**
