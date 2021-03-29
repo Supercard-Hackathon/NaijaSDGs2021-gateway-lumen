@@ -9,5 +9,5 @@ ease tracking of expense. This solution is built for every company as it makes r
 
 ## Official Documentation
 
-An officiatl Notion link being prepared
+A Notion link being prepared
 
